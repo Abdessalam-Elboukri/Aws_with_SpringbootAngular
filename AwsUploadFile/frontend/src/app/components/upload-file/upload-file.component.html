@@ -1,0 +1,19 @@
+<div class="container-fluid d-flex justify-content-center align-items-center vh-100">
+
+<form method="post" #form="ngForm" (submit)="addFile(form)" enctype="multipart/form-data">
+  <div class="text-center">
+    <h6>Upload File</h6>
+  </div>
+  <div class="form-group mt-4">
+    <label for="exampleFormControlFile1">Upload a file</label>
+    <input type="file" class="form-control-file" name="MyFile" (change)="onFileChanged($event)"  id="exampleFormControlFile1">
+  </div>
+  <div class="form-group mt-4">
+    <label for="tt">Description</label>
+    <input type="text" [(ngModel)]="file.description" name="description"  class="form-control" id="tt">
+  </div>
+
+  <button type="submit" class="btn btn-primary mt-4">Submit</button>
+</form>
+  <img src="https://poudlares.s3.eu-west-3.amazonaws.com/images/hotelgvg82738.jfif" alt="">
+</div>
